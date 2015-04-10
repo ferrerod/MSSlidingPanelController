@@ -1627,12 +1627,13 @@ typedef NS_ENUM(NSUInteger, MSSPPanTouchLocation)
         [self performSegueWithIdentifier:MSSPStoryboardIDLeft sender:nil];
     }
     @catch (NSException *exception){}
-    
-    @try
-    {
-        [self performSegueWithIdentifier:MSSPStoryboardIDRight sender:nil];
-    }
-    @catch (NSException *exception){}
+
+// commented out to prevent simulator crash in Xcode 6.3 for left and center only configuration
+//    @try
+//    {
+//        [self performSegueWithIdentifier:MSSPStoryboardIDRight sender:nil];
+//    }
+//    @catch (NSException *exception){}
 }
 
 @end
